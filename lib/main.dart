@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/animated_container_demo.dart';
 import 'package:flutter_animations/home_page.dart';
 
 void main() => runApp(new MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new HomePage(),
+      home: new AnimatedContainerDemo(),
       debugShowCheckedModeBanner: false,
     );
   }
