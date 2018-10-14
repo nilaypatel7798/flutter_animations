@@ -13,20 +13,29 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Flutter Animations Demo"),
       ),
-      body: Column(
-        children: <Widget>[
-          InkWell(
-            onTap: () {
-              _navigateToDetailsScreen();
-            },
-            child: Hero(
-              tag: "hero",
-              child: FlutterLogo(
-                size: 50.0,
-              ),
-            ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: <Widget>[
+              InkWell(
+                    onTap:_navigateToDetailsScreen,
+                    child: Row(
+                      children: <Widget>[
+                        Hero(
+                          tag: "hero_tag",
+                          child: FlutterLogo(
+                            size: 50.0,
+                          ),
+                        ),
+                        Text("Tap here to veiw HERO Animation...")
+                      ],
+                    ),
+                  ),
+            ],
           )
-        ],
+        ),
       ),
     );
   }
