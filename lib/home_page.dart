@@ -16,35 +16,32 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            children: <Widget>[
-              InkWell(
-                    onTap:_navigateToDetailsScreen,
-                    child: Row(
-                      children: <Widget>[
-                        Hero(
-                          tag: "hero_tag",
-                          child: FlutterLogo(
-                            size: 50.0,
-                          ),
+            alignment: Alignment.center,
+            child: Column(
+              children: <Widget>[
+                InkWell(
+                  onTap: _navigateToDetailsScreen,
+                  child: Row(
+                    children: <Widget>[
+                      Hero(
+                        tag: "hero_tag",
+                        child: FlutterLogo(
+                          size: 50.0,
                         ),
-                        Text("Tap here to veiw HERO Animation...")
-                      ],
-                    ),
+                      ),
+                      Text("Tap here to veiw HERO Animation...")
+                    ],
                   ),
-            ],
-          )
-        ),
+                ),
+              ],
+            )),
       ),
     );
   }
 
   void _navigateToDetailsScreen() {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) {
-        return new DetailPage();
-      })
-    );
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+      return new DetailPage();
+    }));
   }
 }
