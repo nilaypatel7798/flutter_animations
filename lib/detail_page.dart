@@ -17,7 +17,7 @@ class _DetailPageState extends State<DetailPage> {
           Hero(
             tag: "hero_tag",
             child: FlutterLogo(
-              size: 200.0,
+              size: 250.0,
             ),
           )
         ],
