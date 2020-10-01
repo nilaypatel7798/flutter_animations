@@ -23,50 +23,35 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: _navigateToDetailsScreen,
-                      child: Row(
-                        children: <Widget>[
-                          Hero(
-                            tag: "hero_tag",
-                            child: FlutterLogo(
-                              size: 50.0,
-                            ),
-                          ),
-                          Text("Tap here to veiw HERO Animation...")
-                        ],
+                  ListTile(
+                    title: Text("Tap here to view HERO Animation..."),
+                    leading: Hero(
+                      tag: "hero_tag",
+                      child: FlutterLogo(
+                        size: 50.0,
                       ),
                     ),
+                    onTap: _navigateToDetailsScreen,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: _navigateToContainerAnimationScreen,
-                      child: Row(
-                        children: <Widget>[
-                          FlutterLogo(
-                            size: 50.0,
-                          ),
-                          Text("Tap here to veiw Container Animation...")
-                        ],
-                      ),
-                    ),
+                  SizedBox(
+                    height: 4,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: _navigateToCustomAnimationScreen,
-                      child: Row(
-                        children: <Widget>[
-                          FlutterLogo(
-                            size: 50.0,
-                          ),
-                          Text("Tap here to veiw Custom Animation...")
-                        ],
-                      ),
+                  ListTile(
+                    title: Text("Tap here to view Container Animation..."),
+                    leading: FlutterLogo(
+                      size: 50.0,
                     ),
+                    onTap: _navigateToContainerAnimationScreen,
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  ListTile(
+                    title: Text("Tap here to view Custom Animation..."),
+                    leading: FlutterLogo(
+                      size: 50.0,
+                    ),
+                    onTap: _navigateToCustomAnimationScreen,
                   ),
                 ],
               ),
